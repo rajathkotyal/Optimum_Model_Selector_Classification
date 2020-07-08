@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -14,9 +15,9 @@ from sklearn.linear_model import SGDClassifier
 #image = Image.open('/Users/rajath/Projects/Diabetes/triangle.png')
 #st.image(image, width = 100)
 
-#def local_css(file_name):
-#    with open(file_name) as f:
-#        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 def main():
     #st.markdown("<h1 style='text-align: left; color: black;'>Blaze Model Selector</h1>", unsafe_allow_html=True)
@@ -215,7 +216,7 @@ def main():
 
 
 
-#local_css("styles.css")
+local_css("styles.css")
 
 if __name__ == "__main__" :
     main()
