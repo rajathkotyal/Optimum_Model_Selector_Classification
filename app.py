@@ -12,8 +12,9 @@ from PIL import Image
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import SGDClassifier
-#image = Image.open('/Users/rajath/Projects/Diabetes/triangle.png')
-#st.image(image, width = 100)
+
+#image = Image.open('triangle.png')
+#st.image(image, width = None)
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -21,16 +22,20 @@ def local_css(file_name):
 
 def main():
     #st.markdown("<h1 style='text-align: left; color: black;'>Blaze Model Selector</h1>", unsafe_allow_html=True)
-    st.title("Blaze Model Selector")
-    st.sidebar.title("Hi There!")
-    #st.sidebar.markdown("Hope you enjoy 😃")
+    st.title("MiniML Model Selector")
+    image = Image.open('mini.png')
+    st.sidebar.image(image, width = 150)
+    st.sidebar.title("Hey There!")
     st.header("Choose the Best Classification Model for your Dataset!")
-    st.subheader("Upload your Classifier Dataset with the format X1, X2, X3.... Xn , Outcome ")
-    st.markdown("Where X are the features & Outcome is the Output Vector Y Containing values 0 or 1 ")
-    st.markdown("Please make sure all the values are Integer/Float & there are NO missing values.")
-    st.markdown("Sample dataset is provided below ✌️")
-
-    uploaded_file = st.file_uploader("Upload the CSV", type="csv")
+    st.markdown("-- Upload your Classifier Dataset with the below format ")
+    image = Image.open('table1.png')
+    st.image(image, width = 250)
+    st.markdown("Where X are the **features** & Outcome is the Output **Vector Y** Containing values 0 or 1 ")
+    st.markdown("-- Make sure all the values are **Integer/Float** & there are **NO** missing values.")
+    st.markdown("__Sample dataset__ is provided below ✌️")
+    st.markdown('[Documentation - Read me for more info](https://github.com/rajathkotyal/Classification_Model_Selector "Click this if you need help")')
+    st.markdown('[About Me](https://www.linkedin.com/in/rajath-kotyal-210ba8157)')
+    uploaded_file = st.file_uploader("Upload the CSV to continue", type="csv")
 
 #LOADING FILE. * CHANGE INTO USER INPUT
     @st.cache(persist = True)
@@ -50,7 +55,7 @@ def main():
         st.subheader("Sample Diabetes Dataset")
         st.write(sample_df)
 
-    st.text('If u see a red error box below. Please Upload the CSV file with the proper format')
+    st.text('[ If u see a red error box below. Please upload the CSV file with the proper format ]')
 
 
 
