@@ -52,7 +52,7 @@ def main():
     st.markdown("-- Make sure all the values are **Integer/Float** & there are **NO** missing values.")
     st.markdown("__Sample dataset__ is provided below ✌️")
     st.markdown('[Documentation - Read this for more info](https://github.com/rajathkotyal/Classification_Model_Selector "Click this if you need help")')
-    st.markdown('[About Me](https://www.linkedin.com/in/rajathkotyal)')
+    st.markdown('[About the Developer](https://www.linkedin.com/in/rajathkotyal)')
 
     uploaded_file = st.file_uploader("Upload the CSV to continue", type="csv")
 
