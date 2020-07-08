@@ -13,7 +13,7 @@ various hyper parameters in real time & choose the best model for your data.
 |  |  |  |  |  | 1 |
 
 3. Upload the dataset in CSV format.
-4. Choose the desired model from the side bar, Tweak the hyper parameters, Choose the matric & click classify.
+4. Choose the desired model from the side bar, Tweak the hyper parameters, Choose the matrix & click classify.
 5. Analyse the graphs, select the model with the highest accuracy & precision.
 6. Use the selected model to train your dataset in any app you are building as it will be the best fit for that particular dataset.
 
